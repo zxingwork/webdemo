@@ -14,5 +14,8 @@
 <a href="/ShowError">ShowError</a>
 <a href="/hello.html">hello</a>
 <a href="/SessionTrack">SessionTracks</a>
+<a href="/DatabaseAccess">DatabaseAccess</a>
+<a href="/PageRedirect">PageRedirect</a>
+<a href="/PageHitCounter">PageHitCounter</a>
 </body>
 </html>
