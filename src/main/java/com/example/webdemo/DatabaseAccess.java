@@ -13,10 +13,11 @@ import java.sql.*;
 public class DatabaseAccess extends HttpServlet {
     private static final long serialVersionUID = 1l;
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://106.55.33.244:3306/admin";
+//    static final String DB_URL = "jdbc:mysql://106.55.33.244:3306/admin";
+    static final String DB_URL = "jdbc:mysql://10.10.5.20:3506/zxtest";
 
     static final String USER = "root";
-    static final String PASS = "Zxssjdy#111899";
+    static final String PASS = "r%do2^p#!5Qt";
 
     public DatabaseAccess() {
         super();
