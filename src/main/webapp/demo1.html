@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajaxdemo1</title>
+</head>
+<body>
+<input type="text" id="username">
+<input type="button" onclick="checkUsername()" value="检测用户是否合法">
+<div id="result">
+
+</div>
+</body>
+<script type="text/javascript">
+    var httpRequest;
+    function checkUsername(){
+        if (window.XMLHttpRequest){
+            httpRequest = new XMLHttpRequest();
+        }else if (window.ActiveXObject){
+            httpRequest = new ActiveXObject();
+        }
+
+        httpRequest.open("POST", "/Servlet1", true);
+        httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        httpRequest.onreadystatechange = response22;
+        var name = document.getElementById("username").value;
+        httpRequest.send("username="+name);
+    }
+    function response22(){
+        if (httpRequest.readyState==4){
+            if (httpRequest.status==200){
+                const text = httpRequest.responseText;
+                const div = document.getElementById("result");
+                div.innerText = text;
+            }
+        }
+    }
+</script>
+</html>
