@@ -22,7 +22,7 @@ public class PageHitCounter extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        recordHit();
+//        recordHit();
         resp.setContentType("text/html;charset=UTF-8");
         hitCount++;
         PrintWriter out = resp.getWriter();
@@ -43,7 +43,6 @@ public class PageHitCounter extends HttpServlet {
     }
 
     public void recordHit() {
-        System.out.println("==> destroy");
         HitCountTb countTb = new HitCountTb();
         try {
             countTb.insert("PageHitCounter",hitCount);
