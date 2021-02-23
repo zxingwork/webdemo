@@ -17,7 +17,6 @@
 <a href="/DatabaseAccess">DatabaseAccess</a>
 <a href="/PageRedirect">PageRedirect</a>
 <a href="/PageHitCounter">PageHitCounter</a>
-<a href="/demo1.html">demo1</a>
-<a href="/city.jsp">city</a>
+<a href="city.jsp">city</a>
 </body>
 </html>

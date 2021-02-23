@@ -11,21 +11,20 @@ import java.io.PrintWriter;
 @WebServlet("/Servlet1")
 public class Servlet1 extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
-        String rs;
-        if (username!=null){
-            if (username!="zhongfucheng"){
-                rs = "you can use the name";
-            }else rs="you can't use the name";
-        }else rs="enter your name";
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
+        String rs;
+        if (!username.equals("")){
+            if (username.equals("zhongfucheng")){
+                rs = "you can't use the name;";
+            }else {
+                rs = "you can use the name;";
+            }
+        }else {
+            rs = "please enter the name!";
+        }
         out.write(rs);
     }
 }
