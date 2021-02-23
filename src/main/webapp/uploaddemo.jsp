@@ -20,7 +20,7 @@
 <script type="text/javascript">
     var file1 = document.getElementById("file1")
     file1.addEventListener("change", function () {
-        var files = file1.files;
+        var files = this.files;
         var filename = files[0].name;
         console.log(filename);
         file1.setAttribute("name", filename);
