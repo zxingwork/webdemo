@@ -5,7 +5,7 @@
          version="4.0">
     <context-param>
         <param-name>javax.faces.CONFIG_FILES</param-name>
-        <param-value>/user.xml</param-value>
+        <param-value>/WEB-INF/classes/user.xml</param-value>
     </context-param>
     <servlet>
         <servlet-name>MyServlet</servlet-name>

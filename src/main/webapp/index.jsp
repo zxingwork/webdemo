@@ -19,5 +19,6 @@
 <a href="/PageHitCounter">PageHitCounter</a>
 <a href="city.jsp">city</a>
 <a href="uploaddemo.jsp">uploaddemo</a>
+<a href="register.jsp">register</a>
 </body>
 </html>

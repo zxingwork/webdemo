@@ -7,8 +7,5 @@
 <!--</faces-config>-->
 <users> 
   <user id="1" username="zhangxing" password="1234" email="zxingwork@163.com" birthday="1995-3-11"/>  
-  <user id="2" username="zx" password="21" email="zxing4fun@163.com" birthday="1995-4-10"/>  
-  <user id="3" username="zx3" password="122" email="zx@163.com" birthday="2021-02-24"/>  
-  <user id="3" username="zx3" password="122" email="zx@163.com" birthday="2021-02-25"/>  
-  <user id="3" username="zx3" password="122" email="zx@163.com" birthday="2021-02-25"/>
+
 </users>
