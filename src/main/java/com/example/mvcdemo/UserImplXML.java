@@ -19,7 +19,8 @@ public class UserImplXML {
 
         try {
             Document document = saxReader.read(path);
-            Element element = (Element) document.selectSingleNode("//user[@username='"+username+"'and@password='"+password+"']");
+            Element element = (Element) document.selectSingleNode("/root/user[@username='"+username+"'and@password='"+password+"']");
+//            Element element = (Element) document.selectSingleNode("user");
             if (element==null){
                 return null;
             }

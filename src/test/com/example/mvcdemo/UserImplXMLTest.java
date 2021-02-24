@@ -11,6 +11,7 @@ class UserImplXMLTest {
     void find() {
         UserImplXML userImplXML = new UserImplXML();
         User user = userImplXML.find(username, password);
+        System.out.println(user);
 
         System.out.println(user.getBirthday());
         System.out.println(user.getEmail());
