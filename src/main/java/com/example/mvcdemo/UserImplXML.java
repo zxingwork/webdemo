@@ -42,9 +42,4 @@ public class UserImplXML {
             throw new RuntimeException("查询时出错");
         }
     }
-    private String username = "zhongfucheng";
-    private String password = "123";
-
-
-
 }
