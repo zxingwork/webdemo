@@ -27,12 +27,13 @@
         console.log(filename);
         file1.setAttribute("name", filename);
     })
-    //当点击上传之后，会清除选择的文件
-    var submit = document.getElementById("submit");
-    submit.addEventListener("click", function () {
-        file1.value ='';
-        console.log(file1.files)
-    })
+    // 当点击上传之后，会清除选择的文件
+    // var submit = document.getElementById("submit");
+    // submit.addEventListener("click", function () {
+    //
+    //     file1.value ='';
+    //     console.log(file1.files)
+    // })
 </script>
 </body>
 </html>
