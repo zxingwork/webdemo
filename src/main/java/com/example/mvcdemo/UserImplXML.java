@@ -22,26 +22,13 @@ public class UserImplXML {
         String path = "user.xml";
 
         try {
-            Document document = saxReader.read(new File(path));
-            Element rootElement = document.getRootElement();
-            Iterator iterator = rootElement.elementIterator();
+            Document document = saxReader.read(path);
 
-            while (iterator.hasNext()){
-                Element stu = (Element) iterator.next();
-                List<Attribute> attributes = stu.attributes();
-                System.out.println("======获取属性值======");
-                for (Attribute attribute:attributes){
-                    System.out.println(attribute.getValue());
-                }
-                System.out.println("======遍历子节点======");
-                Iterator iterator1 = stu.elementIterator();
-                while (iterator1.hasNext()){
-                    Element stuChild = (Element) iterator1.next();
-                    System.out.println("节点名："+stuChild.getName()+"---节点值："+stuChild.getStringValue());
-                }
-            }
-            Element element = (Element) document.selectSingleNode("user");
+//            Element element = (Element) document.getRootElement();
+            String xpath = "/users/user[@username='zhangxing' and @password='1234']";
+            Element element = (Element) document.selectSingleNode(xpath);
             if (element==null){
+                System.out.println("element is null");
                 return null;
             }
             User user = new User();
@@ -50,7 +37,7 @@ public class UserImplXML {
             user.setPassword(element.attributeValue("password"));
             user.setEmail(element.attributeValue("email"));
 
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yy-MM-dd");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date birthday = simpleDateFormat.parse(element.attributeValue("birthday"));
             user.setBirthday(birthday);
             return user;

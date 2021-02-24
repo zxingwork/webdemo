@@ -6,8 +6,6 @@
 <!--              version="2.0">-->
 <!--</faces-config>-->
 <users>
-    <user>
-        <username>zhongfucheng</username>
-        <password>123</password>
-    </user>
+    <user id="1" username="zhangxing" password="1234" email="zxingwork@163.com" birthday="1995-3-11"/>
+    <user id="2" username="zx" password="21" email="zxing4fun@163.com" birthday="1995-4-10"/>
 </users>

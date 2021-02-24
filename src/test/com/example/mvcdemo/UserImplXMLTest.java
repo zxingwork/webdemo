@@ -13,10 +13,10 @@ class UserImplXMLTest {
         User user = userImplXML.find(username, password);
         System.out.println(user);
 
-        System.out.println(user.getBirthday());
-        System.out.println(user.getEmail());
-        System.out.println(user.getId());
-        System.out.println(user.getUsername());
-        System.out.println(user.getPassword());
+        System.out.println("birthday:"+user.getBirthday());
+        System.out.println("email:"+user.getEmail());
+        System.out.println("id:"+user.getId());
+        System.out.println("username:"+user.getUsername());
+        System.out.println("password:"+user.getPassword());
     }
 }
